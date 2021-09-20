@@ -58,10 +58,10 @@ Home
 
 ## brightness control ##
 XF86MonBrightnessUp
-        brightnessctl s +1% --device=intel_backlight
+        brightnessctl s +1% --device=intel_backlight && $HOME/.scripts/brightnessControl.sh up
 
 XF86MonBrightnessDown
-        brightnessctl s 1%- --device=intel_backlight
+        brightnessctl s 1%- --device=intel_backlight && $HOME/.scripts/brightnessControl.sh down
 
 ## volume control ##
 XF86AudioMute
@@ -75,7 +75,7 @@ XF86Audio{Raise,Lower}Volume
 
 # program launcher
 super + @space
-	rofi -show {run} -theme $HOME/.config/rofi/nord/nord.rasi
+	rofi -show run -theme $HOME/.config/rofi/nord/nord.rasi
 
 # make sxhkd reload its configuration files:
 super + Escape

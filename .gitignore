@@ -26,6 +26,9 @@ wal/
 wpg/
 xfce4/
 ytmdl/
+coc/
 mimeapps.list
 pavucontrol.ini
 QtProject.conf
+coc-settings.json
+.vimrc

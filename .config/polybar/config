@@ -58,15 +58,15 @@ fixed-center = true
 ; Dimension defined as pixel value (e.g. 35) or percentage (e.g. 50%),
 ; the percentage can optionally be extended with a pixel offset like so:
 ; 50%:-10, this will result in a width or height of 50% minus 10 pixels
-width = 98%
-height = 36
+;width = 98%
+height = 45
 
 ; Offset defined as pixel value (e.g. 35) or percentage (e.g. 50%)
 ; the percentage can optionally be extended with a pixel offset like so:
 ; 50%:-10, this will result in an offset in the x or y direction 
 ; of 50% minus 10 pixels
-offset-x = 1%
-offset-y = 1%
+;offset-x = 1%
+offset-y = 1.5%
 
 ; Background ARGB color (e.g. #f00, #ff992a, #ddff1023)
 background = ${color.alpha}
@@ -90,8 +90,8 @@ radius-bottom = 0.0
 ; Individual values can be defined using:
 ;   {overline,underline}-size
 ;   {overline,underline}-color
-underline-size = 2
-underline-color = ${color.foreground}
+;underline-size = 2
+;underline-color = #5E81AC
 
 ; Values applied to all borders
 ; Individual side values can be defined using:
@@ -104,8 +104,8 @@ underline-color = ${color.foreground}
 ; the border is placed withing this area. So you effectively only have the
 ; following horizontal space on the bar:
 ;   width - border-right-size - border-left-size
-border-size = 0
-border-color = ${color.background}
+;border-size = 3
+;border-color = #5E81AC
 
 ; Number of spaces to add at the beginning/end of the bar
 ; Individual side values can be defined using:
@@ -287,13 +287,17 @@ compositing-border = over
 ; Enables pseudo-transparency for the bar
 ; If set to true the bar can be transparent without a compositor.
 pseudo-transparency = false
-[bar/top]
-inherit = bar/main
-modules-left = workspaces
-bottom = false
 
-[bar/bottom]
+[bar/left]
 inherit = bar/main
-modules-right = date
-bottom = true
+modules-center = workspaces
+width = 16%
+offset-x = 0.7%
+
+
+[bar/right]
+inherit = bar/main
+modules-center = title
+width = 40%
+offset-x = -15%
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

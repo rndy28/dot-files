@@ -3,7 +3,7 @@ export PATH="${PATH}:${HOME}/.local/bin/"
 export PATH="${PATH}:${HOME}/.local/share/gem/"
 export ZSH="$HOME/.oh-my-zsh"
 export TYPEWRITTEN_COLOR_MAPPINGS="primary:#DBE2EF;secondary:#A7C5EB;accent:#F4F4F2;info_negative:#FC5185;info_positive:#8CEA71;info_neutral_1:#FF9580;info_neutral_2:#FFFF80;info_special:#80FFEA"
-export TYPEWRITTEN_SYMBOL="海"
+export TYPEWRITTEN_SYMBOL="魂"
 TYPEWRITTEN_CURSOR="terminal"
 
 # Set name of the theme to load --- if set to "random", it will
@@ -44,7 +44,7 @@ ZSH_THEME="typewritten"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # Caution: this setting can cause issues with multiline prompts (zsh 5.7.1 and newer seem to work)
@@ -54,7 +54,7 @@ ZSH_THEME="typewritten"
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+ DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -72,7 +72,7 @@ ZSH_THEME="typewritten"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 

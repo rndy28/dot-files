@@ -1,33 +1,28 @@
-""""""""""""""""""""""""""""""""""
+"help key-notation"help key-notation""""""""""""""""""""""""""""""""
 "   Usability
 """"""""""""""""""""""""""""""""""
-
+set mouse=a
 set smarttab
 set tabstop=4
 set shiftwidth=4
+set mouse=a
 " use spaces instead of tabs
 set expandtab
-set guicursor=
+
 
 """"""""""""""""""""""""""""""""""
 " Keybinds
 """"""""""""""""""""""""""""""""""
+nnoremap <silent> <C-k> :Commentary<CR>
+nnoremap <silent> <C-v> :vsp<CR>
+nnoremap <silent> <C-h> :sp<CR>
+nnoremap <silent> <C-j> :tab ter<CR>
 
 " NerdTree Keybinding
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
-
-" Copy From Keyboard
-vnoremap <leader>y "+y
-" Paste From Keyboard
-vnoremap <leader>p "+p
-" j/k will move virtual lines (lines that wrap)
-noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
-noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
-
-
-""""""""""""""""""""""""""""""""""
+nnoremap <silent> <C-n> :NERDTree<CR>
+nnoremap <silent> <C-t> :NERDTreeToggle<CR>
+nnoremap <silent> <C-f> :NERDTreeFind<CR>
+"""""""""""""""""""""""""""""""
 "   Interface
 """"""""""""""""""""""""""""""""""
 
@@ -51,13 +46,22 @@ highlight comment cterm=italic gui=italic
 
 
 call plug#begin()
-    Plug 'ayu-theme/ayu-vim' " colorscheme
-    Plug 'bling/vim-airline' " bottom status bar
+    Plug 'arcticicestudio/nord-vim' 
     Plug 'Yggdroot/indentLine' " line indentation visualization
     Plug 'scrooloose/nerdtree' " side directory viewer
     Plug 'sheerun/vim-polyglot' " syntax hightlighting
+    Plug 'dense-analysis/ale'
+    Plug 'bling/vim-airline' " bottom status bar
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
+    Plug 'https://github.com/tpope/vim-commentary'
+    Plug 'pangloss/vim-javascript'
+    Plug 'mxw/vim-jsx'
+    Plug 'jelera/vim-javascript-syntax'
+    Plug 'tpope/vim-fugitive'
+    Plug 'jiangmiao/auto-pairs'
 call plug#end()
-
 
 " --------- bling/vim-airline settings -------------
 " always show statusbar
@@ -74,12 +78,13 @@ let g:indentLine_showFirstLevelIndent=1
 let g:indentLine_setColors=0
 
 
-""""""""""""""""""Neovide"""""""""""""""""
-let g:neovide_cursor_trail_length=0.8
-let g:neovide_cursor_antialiasing=v:false
-let g:neovide_cursor_vfx_mode = "ripple"
-let g:neovide_cursor_vfx_particle_lifetime=0.8
-let g:neovide_cursor_vfx_particle_density=7.0
-let g:neovide_transparency=0.8
-""""""""""""""""""""""""""""""""""""""""""
-set nocompatible
+autocmd FileType json syntax match Comment +\/\/.\+$+
+"------ Color Scheme ---------
+colorscheme nord
+"""""""""""""""""""""""""""""""
+let g:ale_disable_lsp = 1
+
+"------ Enable indentation------
+filetype indent on
+filetype plugin indent on
+"-------------------------------
