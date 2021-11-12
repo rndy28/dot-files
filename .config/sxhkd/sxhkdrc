@@ -9,13 +9,13 @@ super + Return
 alt + k
         $HOME/.config/sxhkd/scripts/draw-terminal.sh
 
-# launch chrome 
-super + shift + g
-       google-chrome-stable 
+# launch browser 
+super + shift + b
+       brave 
 
-# launch thunar 
-super + shift + t
-        thunar
+# launch file manager
+super + shift + f
+        nautilus
 
 # launch vscode
 super + shift + c

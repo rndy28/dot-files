@@ -1,10 +1,24 @@
+zstyle ':omz:update' mode disabled
+
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="${PATH}:${HOME}/.local/bin/"
 export PATH="${PATH}:${HOME}/.local/share/gem/"
+export PATH="${PATH}:/opt/android-sdk/cmdline-tools/latest/bin"
+export PATH="${PATH}:/opt/android-sdk/platforms"
+export PATH="${PATH}:/opt/android-sdk/platform-tools"
+export PATH="${PATH}:/opt/android-sdk/emulator"
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export ANDROID_HOME=/opt/android-sdk
 export ZSH="$HOME/.oh-my-zsh"
 export TYPEWRITTEN_COLOR_MAPPINGS="primary:#DBE2EF;secondary:#A7C5EB;accent:#F4F4F2;info_negative:#FC5185;info_positive:#8CEA71;info_neutral_1:#FF9580;info_neutral_2:#FFFF80;info_special:#80FFEA"
 export TYPEWRITTEN_SYMBOL="魂"
 TYPEWRITTEN_CURSOR="terminal"
+export PF_INFO="title os wm editor uptime memory"
+export PF_ASCII=""
+export PF_ALIGN="10"
+export PF_COL1="3"
+export PF_COL2="2"
+#export PF_SEP=">"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
