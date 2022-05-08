@@ -5,10 +5,8 @@ set mouse=a
 set smarttab
 set tabstop=4
 set shiftwidth=4
-set mouse=a
 " use spaces instead of tabs
 set expandtab
-
 
 """"""""""""""""""""""""""""""""""
 " Keybinds
@@ -72,19 +70,26 @@ let g:airline_detect_paste=1
 let g:airline_powerline_fonts=1
 " show airline for tabs
 let g:airline#extension#tabline#enabled=1
-
+""""""""""""""""""""""""""""""""""""""""""""""""""""
 " --------- indentLine settings -------------------
 let g:indentLine_showFirstLevelIndent=1
 let g:indentLine_setColors=0
-
-
-autocmd FileType json syntax match Comment +\/\/.\+$+
-"------ Color Scheme ---------
+"""""""""""""""""""""""""""""""""""""""""""""""""""
+"---------------- Color Scheme --------------------
 colorscheme nord
-"""""""""""""""""""""""""""""""
-let g:ale_disable_lsp = 1
-
-"------ Enable indentation------
+""""""""""""""""""""""""""""""""""""""""""""""""""
+"------------ Enable indentation -----------------
 filetype indent on
 filetype plugin indent on
-"-------------------------------
+""""""""""""""""""""""""""""""""
+"------------ Plugin settings -------------------
+" NERDTree
+"  Start NERDTree and put the cursor back in the other window.
+" autocmd VimEnter * NERDTree | wincmd p 
+" Open the existing NERDTree on each new tab.
+" autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
+"""""""""""""""""""""""""""""""""""""""""""""""""
+
+autocmd FileType json syntax match Comment +\/\/.\+$+
+let g:ale_disable_lsp = 1
+

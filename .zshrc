@@ -8,7 +8,9 @@ export PATH="${PATH}:/opt/android-sdk/platforms"
 export PATH="${PATH}:/opt/android-sdk/platform-tools"
 export PATH="${PATH}:/opt/android-sdk/emulator"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 export ANDROID_HOME=/opt/android-sdk
+export CHROME_EXECUTABLE=/usr/bin/brave
 export ZSH="$HOME/.oh-my-zsh"
 export TYPEWRITTEN_COLOR_MAPPINGS="primary:#DBE2EF;secondary:#A7C5EB;accent:#F4F4F2;info_negative:#FC5185;info_positive:#8CEA71;info_neutral_1:#FF9580;info_neutral_2:#FFFF80;info_special:#80FFEA"
 export TYPEWRITTEN_SYMBOL="魂"
@@ -19,13 +21,24 @@ export PF_ALIGN="10"
 export PF_COL1="3"
 export PF_COL2="2"
 #export PF_SEP=">"
-
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="typewritten"
 
+SPACESHIP_CHAR_SYMBOL="海 "
+SPACESHIP_CHAR_COLOR_SUCCESS="#88C0D0"
+SPACESHIP_CHAR_COLOR_FAILURE="#BF616A"
+SPACESHIP_CHAR_COLOR_SECONDARY="#EBCB8B"
+#SPACESHIP_HOST_SHOW=always
+SPACESHIP_USER_SHOW=always
+SPACESHIP_USER_COLOR="#EBCB8B"
+SPACESHIP_PROMPT_ADD_NEWLINE=false
+SPACESHIP_TIME_SHOW=true
+SPACESHIP_TIME_12HR=true
+SPACESHIP_TIME_COLOR="#EBCB8B"
+SPACESHIP_TIME_FORMAT=%w
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -46,10 +59,10 @@ ZSH_THEME="typewritten"
 # DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+  export UPDATE_ZSH_DAYS=30
 
 # Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
+ DISABLE_MAGIC_FUNCTIONS="true"
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -115,4 +128,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
+alias ls="exa -lgh --icons --group-directories-first"
+alias ping="gping"
+alias cat="bat --paging=never"
+alias ps="procs"

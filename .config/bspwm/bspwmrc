@@ -13,11 +13,8 @@ bspc config borderless_monocle    true
 bspc config gapless_monocle       true
 bspc config focus_follows_pointer true
 
-bspc rule -a 'Brave-browser' state=fullscreen desktop='^1' follow=on
-bspc rule -a 'kitty' state=floating rectangle=600x360+0+0 center=true
-bspc rule -a 'Code' state=fullscreen desktop='^2' follow=on
-bspc rule -a 'firefox' desktop='^3' follow=on
-
+#bspc rule -a 'kitty' state=floating rectangle=600x360+0+0 center=true
+#bspc rule -a 'Code' state=fullscreen desktop='^2' follow=on
 
 xsetroot -cursor_name left_ptr
 xset -dpms s off
@@ -25,5 +22,5 @@ xset -dpms s off
 ## autostart ##
 picom &
 nitrogen --restore &
-bash ~/.config/polybar/launch.sh
-
+prime-offload &
+# bash ~/.config/polybar/launch.sh
